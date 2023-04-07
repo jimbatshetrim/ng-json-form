@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {JsonFormData} from 'src/misc/app.interface';
 import {FormService} from '../services/form.service';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-json-form',
@@ -9,7 +9,7 @@ import {FormService} from '../services/form.service';
 })
 export class JsonFormComponent implements OnInit {
   formService = inject(FormService);
-  form!: JsonFormData;
+  form!: FormGroup;
 
   ngOnInit(): void {
     this.formService.configureForm('my-form.json')

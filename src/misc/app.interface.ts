@@ -17,7 +17,7 @@ interface JsonFormControlOptions {
     icon?: string;
 }
 
-interface JsonFormControls {
+export interface JsonFormControls {
     name: string;
     label: string;
     value: string;
